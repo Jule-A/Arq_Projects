@@ -26,6 +26,8 @@ void secuencial_Efecto1(void);
 void secuencial_Efecto2(void);
 void secuencial_Efecto3(void);
 void secuencial_Efecto4(void);
+void secuencial_Efecto5(void);
+void secuencial_Efecto6(void);
 
 unsigned char efecto = 1;
 unsigned long velocidad = 1;
@@ -40,7 +42,7 @@ int main(void) {
         //efecto
         if (!PORTBbits.RB7) {
             __delay_ms(50);
-            if(++efecto==5){efecto=1;}
+            if(++efecto==7){efecto=1;}
         }
         
         switch (efecto) {
@@ -52,6 +54,10 @@ int main(void) {
                 break;
             case 4: secuencial_Efecto4();
                 break;
+            case 5: secuencial_Efecto5();
+                break;
+            case 6: secuencial_Efecto6();
+                break;    
         }
     }
     return 1;
@@ -117,5 +123,58 @@ void secuencial_Efecto4(void) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
         }
+    }
+}
+
+void secuencial_Efecto5(void) {
+    for (int i = 0; i < 8; i++) {
+            LATD = 1 << i;
+        if(velocidad==1){__delay_ms(50);}
+        else if(velocidad==2){__delay_ms(100);}
+        else if(velocidad==3){__delay_ms(200);}
+        else if(velocidad==4){__delay_ms(400);}
+            LATD = 1 << (7-i);
+        if(velocidad==1){__delay_ms(50);}
+        else if(velocidad==2){__delay_ms(100);}
+        else if(velocidad==3){__delay_ms(200);}
+        else if(velocidad==4){__delay_ms(400);}
+        //velocidad
+        if (!PORTBbits.RB6) {
+            __delay_ms(50);
+            if(++velocidad==5){velocidad=1;}
+        }
+    }
+}
+
+void secuencial_Efecto6(void) {
+    volatile unsigned int m = 0;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 8; j++) {
+            LATD = m;
+            if (i == 0) {
+                if (j % 2 == 0)
+                    m += (1 << j);
+            } else {
+                if (j % 2 == 0)
+                    m += (1 << (7-j));
+            }
+            if (velocidad == 1) {
+                __delay_ms(50);
+            } else if (velocidad == 2) {
+                __delay_ms(100);
+            } else if (velocidad == 3) {
+                __delay_ms(200);
+            } else if (velocidad == 4) {
+                __delay_ms(400);
+            }
+            //velocidad
+            if (!PORTBbits.RB6) {
+                __delay_ms(50);
+                if (++velocidad == 5) {
+                    velocidad = 1;
+                }
+            }
+        }
+        m = 0;
     }
 }

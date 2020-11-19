@@ -27,16 +27,20 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 D:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"33 C:\Users\julia\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+"35 C:\Users\julia\Documents\GitHub\Arq_Projects\GPIO\gpio.X\secuencia_main.c
 [v _main main `(i  1 e 2 0 ]
-"60
+"66
 [v _secuencial_Efecto1 secuencial_Efecto1 `(v  1 e 1 0 ]
-"75
+"81
 [v _secuencial_Efecto2 secuencial_Efecto2 `(v  1 e 1 0 ]
-"90
+"96
 [v _secuencial_Efecto3 secuencial_Efecto3 `(v  1 e 1 0 ]
-"105
+"111
 [v _secuencial_Efecto4 secuencial_Efecto4 `(v  1 e 1 0 ]
+"129
+[v _secuencial_Efecto5 secuencial_Efecto5 `(v  1 e 1 0 ]
+"149
+[v _secuencial_Efecto6 secuencial_Efecto6 `(v  1 e 1 0 ]
 [s S35 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -96,44 +100,62 @@
 ]
 [u S83 . 1 `S66 1 . 1 0 `S69 1 . 1 0 `S78 1 . 1 0 ]
 [v _INTCON2bits INTCON2bits `VES83  1 e 1 @4081 ]
-"30 C:\Users\julia\Documents\GitHub\ARQCA\GPIO\gpio.X\secuencia_main.c
+"32 C:\Users\julia\Documents\GitHub\Arq_Projects\GPIO\gpio.X\secuencia_main.c
 [v _efecto efecto `uc  1 e 1 0 ]
-"31
-[v _velocidad velocidad `ul  1 e 4 0 ]
 "33
+[v _velocidad velocidad `ul  1 e 4 0 ]
+"35
 [v _main main `(i  1 e 2 0 ]
 {
-"58
+"64
 } 0
-"105
+"149
+[v _secuencial_Efecto6 secuencial_Efecto6 `(v  1 e 1 0 ]
+{
+"152
+[v secuencial_Efecto6@j j `i  1 a 2 5 ]
+"151
+[v secuencial_Efecto6@i i `i  1 a 2 3 ]
+"150
+[v secuencial_Efecto6@m m `VEui  1 a 2 7 ]
+"180
+} 0
+"129
+[v _secuencial_Efecto5 secuencial_Efecto5 `(v  1 e 1 0 ]
+{
+"130
+[v secuencial_Efecto5@i i `i  1 a 2 2 ]
+"147
+} 0
+"111
 [v _secuencial_Efecto4 secuencial_Efecto4 `(v  1 e 1 0 ]
 {
-"107
+"113
 [v secuencial_Efecto4@i i `i  1 a 2 3 ]
-"106
+"112
 [v secuencial_Efecto4@n n `VEui  1 a 2 7 ]
 [v secuencial_Efecto4@m m `VEui  1 a 2 5 ]
-"121
+"127
 } 0
-"90
+"96
 [v _secuencial_Efecto3 secuencial_Efecto3 `(v  1 e 1 0 ]
 {
-"91
+"97
 [v secuencial_Efecto3@i i `i  1 a 2 2 ]
-"103
+"109
 } 0
-"75
+"81
 [v _secuencial_Efecto2 secuencial_Efecto2 `(v  1 e 1 0 ]
 {
-"76
+"82
 [v secuencial_Efecto2@i i `i  1 a 2 6 ]
 [v secuencial_Efecto2@j j `i  1 a 2 4 ]
-"88
+"94
 } 0
-"60
+"66
 [v _secuencial_Efecto1 secuencial_Efecto1 `(v  1 e 1 0 ]
 {
-"61
+"67
 [v secuencial_Efecto1@i i `i  1 a 2 2 ]
-"73
+"79
 } 0
