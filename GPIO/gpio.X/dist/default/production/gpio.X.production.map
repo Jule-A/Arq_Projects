@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\gpio.X.production.sym \
   --cmf=dist/default/production\gpio.X.production.cmf -z -Q18F4550 \
-  -oC:\Users\julia\AppData\Local\Temp\s32k.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\julia\AppData\Local\Temp\s5hc.3 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/gpio.X.production.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=060h-07FFh -pstack=STACK -ACODE=00h-07FFFh \
   -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\julia\AppData\Local\Temp\s32k.o \
+  C:\Users\julia\AppData\Local\Temp\s5hc.o \
   dist/default/production\gpio.X.production.o 
 
 Object code version is 3.11
@@ -32,39 +32,39 @@ Machine type is 18F4550
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\julia\AppData\Local\Temp\s32k.o
+C:\Users\julia\AppData\Local\Temp\s5hc.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  0        0        4        0       0
 dist/default/production\gpio.X.production.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
-                text6                              75C2     75C2      162     3AE1       0
-                text5                              7886     7886      18A     3C43       0
-                text4                              7724     7724      162     3B92       0
-                text3                              7A10     7A10      1B2     3D08       0
-                text2                              7DBC     7DBC      244     3EDE       0
-                text1                              7BC2     7BC2      1FA     3DE1       0
-                text0                              74FE     74FE       C4     3A7F       0
+                text6                              73FC     73FC      19A     39FE       0
+                text5                              7730     7730      1C2     3B98       0
+                text4                              7596     7596      19A     3ACB       0
+                text3                              78F2     78F2      1EA     3C79       0
+                text2                              7D00     7D00      300     3E80       0
+                text1                              7ADC     7ADC      224     3D6E       0
+                text0                              7370     7370       8C     39B8       0
                 cstackCOMRAM                          1        1        B        1       1
                 dataCOMRAM                            C        C        5        1       1
-                cinit                              74D4     74D4       2A     3A6A       0
-                idataCOMRAM                        74CF     74CF        5     74CF       0
+                cinit                              7346     7346       2A     39A3       0
+                idataCOMRAM                        7341     7341        5     7341       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 init                                  0        0        4         0
-                text6                              75C2     75C2      162         0
-                text5                              7886     7886      18A         0
-                text4                              7724     7724      162         0
-                text3                              7A10     7A10      1B2         0
-                text2                              7DBC     7DBC      244         0
-                text1                              7BC2     7BC2      1FA         0
-                text0                              74FE     74FE       C4         0
-                cinit                              74D4     74D4       2A         0
-                idataCOMRAM                        74CF     74CF        5         0
+                text6                              73FC     73FC      19A         0
+                text5                              7730     7730      1C2         0
+                text4                              7596     7596      19A         0
+                text3                              78F2     78F2      1EA         0
+                text2                              7D00     7D00      300         0
+                text1                              7ADC     7ADC      224         0
+                text0                              7370     7370       8C         0
+                cinit                              7346     7346       2A         0
+                idataCOMRAM                        7341     7341        5         0
 
         CLASS   CONST          
 
@@ -116,15 +116,15 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 cstackCOMRAM                   000001  000010  000011         1       1  COMRAM  
-                idataCOMRAM                    0074CF  000005  0074D4      74CF       0  CODE    
-                cinit                          0074D4  00002A  0074FE      3A6A       0  CODE    
-                text0                          0074FE  0000C4  0075C2      3A7F       0  CODE    
-                text6                          0075C2  000162  007724      3AE1       0  CODE    
-                text4                          007724  000162  007886      3B92       0  CODE    
-                text5                          007886  00018A  007A10      3C43       0  CODE    
-                text3                          007A10  0001B2  007BC2      3D08       0  CODE    
-                text1                          007BC2  0001FA  007DBC      3DE1       0  CODE    
-                text2                          007DBC  000244  008000      3EDE       0  CODE    
+                idataCOMRAM                    007341  000005  007346      7341       0  CODE    
+                cinit                          007346  00002A  007370      39A3       0  CODE    
+                text0                          007370  00008C  0073FC      39B8       0  CODE    
+                text6                          0073FC  00019A  007596      39FE       0  CODE    
+                text4                          007596  00019A  007730      3ACB       0  CODE    
+                text5                          007730  0001C2  0078F2      3B98       0  CODE    
+                text3                          0078F2  0001EA  007ADC      3C79       0  CODE    
+                text1                          007ADC  000224  007D00      3D6E       0  CODE    
+                text2                          007D00  000300  008000      3E80       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -139,14 +139,14 @@ UNUSED ADDRESS RANGES
         BANK6            000600-0006FF              100
         BANK7            000700-0007FF              100
         BIGRAM           000011-0007FF              7EF
-        CODE             000004-0074CE             74CB
+        CODE             000004-007340             733D
         COMRAM           000011-00005F               4F
-        CONST            000004-0074CE             74CB
+        CONST            000004-007340             733D
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000800-0074CE             6CCF
+        MEDIUMCONST      000800-007340             6B41
         RAM              000060-0007FF              100
         SFR              000F60-000FFF               A0
-        SMALLCONST       000800-0074CE              100
+        SMALLCONST       000800-007340              100
         STACK            000060-0007FF              7A0
 
                                   Symbol Table
@@ -304,27 +304,27 @@ ___rparam_used               (abs)        000001
 ___sp                        stack        000000
 __accesstop                  (abs)        000060
 __activetblptr               (abs)        000002
-__end_of__initialization     cinit        0074F4
-__end_of_main                text0        0075C2
-__end_of_secuencial_Efecto1  text6        007724
-__end_of_secuencial_Efecto2  text5        007A10
-__end_of_secuencial_Efecto3  text4        007886
-__end_of_secuencial_Efecto4  text3        007BC2
+__end_of__initialization     cinit        007366
+__end_of_main                text0        0073FC
+__end_of_secuencial_Efecto1  text6        007596
+__end_of_secuencial_Efecto2  text5        0078F2
+__end_of_secuencial_Efecto3  text4        007730
+__end_of_secuencial_Efecto4  text3        007ADC
 __end_of_secuencial_Efecto5  text2        008000
-__end_of_secuencial_Efecto6  text1        007DBC
-__initialization             cinit        0074D4
+__end_of_secuencial_Efecto6  text1        007D00
+__initialization             cinit        007346
 __mediumconst                mediumconst  000000
-__pcinit                     cinit        0074D4
+__pcinit                     cinit        007346
 __pcstackCOMRAM              cstackCOMRAM 000001
 __pdataCOMRAM                dataCOMRAM   00000C
-__pidataCOMRAM               idataCOMRAM  0074CF
-__ptext0                     text0        0074FE
-__ptext1                     text1        007BC2
-__ptext2                     text2        007DBC
-__ptext3                     text3        007A10
-__ptext4                     text4        007724
-__ptext5                     text5        007886
-__ptext6                     text6        0075C2
+__pidataCOMRAM               idataCOMRAM  007341
+__ptext0                     text0        007370
+__ptext1                     text1        007ADC
+__ptext2                     text2        007D00
+__ptext3                     text3        0078F2
+__ptext4                     text4        007596
+__ptext5                     text5        007730
+__ptext6                     text6        0073FC
 __ramtop                     ramtop       000800
 __size_of_main               (abs)        000000
 __size_of_secuencial_Efecto1 (abs)        000000
@@ -335,15 +335,15 @@ __size_of_secuencial_Efecto5 (abs)        000000
 __size_of_secuencial_Efecto6 (abs)        000000
 __smallconst                 smallconst   000000
 _efecto                      dataCOMRAM   000010
-_main                        text0        0074FE
-_secuencial_Efecto1          text6        0075C2
-_secuencial_Efecto2          text5        007886
-_secuencial_Efecto3          text4        007724
-_secuencial_Efecto4          text3        007A10
-_secuencial_Efecto5          text2        007DBC
-_secuencial_Efecto6          text1        007BC2
+_main                        text0        007370
+_secuencial_Efecto1          text6        0073FC
+_secuencial_Efecto2          text5        007730
+_secuencial_Efecto3          text4        007596
+_secuencial_Efecto4          text3        0078F2
+_secuencial_Efecto5          text2        007D00
+_secuencial_Efecto6          text1        007ADC
 _velocidad                   dataCOMRAM   00000C
-end_of_initialization        cinit        0074F4
+end_of_initialization        cinit        007366
 intlevel0                    text         000000
 intlevel1                    text         000000
 intlevel2                    text         000000
@@ -362,7 +362,7 @@ secuencial_Efecto6@m         cstackCOMRAM 000008
 stackhi                      (abs)        0007FF
 stacklo                      (abs)        000060
 start                        init         000000
-start_initialization         cinit        0074D4
+start_initialization         cinit        007346
 
 
 FUNCTION INFORMATION:
@@ -403,7 +403,7 @@ Total ram usage:        2 bytes
 
  *************** function _secuencial_Efecto6 *****************
  Defined at:
-		line 149 in file "secuencia_main.c"
+		line 184 in file "secuencia_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -434,7 +434,7 @@ Total ram usage:        9 bytes
 
  *************** function _secuencial_Efecto5 *****************
  Defined at:
-		line 129 in file "secuencia_main.c"
+		line 147 in file "secuencia_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -463,7 +463,7 @@ Total ram usage:        4 bytes
 
  *************** function _secuencial_Efecto4 *****************
  Defined at:
-		line 111 in file "secuencia_main.c"
+		line 123 in file "secuencia_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -494,7 +494,7 @@ Total ram usage:        9 bytes
 
  *************** function _secuencial_Efecto3 *****************
  Defined at:
-		line 96 in file "secuencia_main.c"
+		line 102 in file "secuencia_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -553,7 +553,7 @@ Total ram usage:        8 bytes
 
  *************** function _secuencial_Efecto1 *****************
  Defined at:
-		line 66 in file "secuencia_main.c"
+		line 60 in file "secuencia_main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -585,18 +585,18 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 shared
-		__initialization		CODE           	74D4	0000	32
+		__initialization		CODE           	7346	0000	32
 
 shared estimated size: 32
 
 secuencia_main.c
-		_main          		CODE           	74FE	0000	196
-		_secuencial_Efecto1		CODE           	75C2	0000	354
-		_secuencial_Efecto2		CODE           	7886	0000	394
-		_secuencial_Efecto3		CODE           	7724	0000	354
-		_secuencial_Efecto4		CODE           	7A10	0000	434
-		_secuencial_Efecto5		CODE           	7DBC	0000	580
-		_secuencial_Efecto6		CODE           	7BC2	0000	506
+		_main          		CODE           	7370	0000	140
+		_secuencial_Efecto1		CODE           	73FC	0000	410
+		_secuencial_Efecto2		CODE           	7730	0000	450
+		_secuencial_Efecto3		CODE           	7596	0000	410
+		_secuencial_Efecto4		CODE           	78F2	0000	490
+		_secuencial_Efecto5		CODE           	7D00	0000	768
+		_secuencial_Efecto6		CODE           	7ADC	0000	548
 
-secuencia_main.c estimated size: 2818
+secuencia_main.c estimated size: 3216
 

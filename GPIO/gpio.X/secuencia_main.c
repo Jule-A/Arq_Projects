@@ -39,12 +39,6 @@ int main(void) {
     TRISBbits.TRISB6 = 1;
     INTCON2bits.RBPU = 0;
     while (1) {
-        //efecto
-        if (!PORTBbits.RB7) {
-            __delay_ms(50);
-            if(++efecto==7){efecto=1;}
-        }
-        
         switch (efecto) {
             case 1: secuencial_Efecto1();
                 break;
@@ -75,6 +69,12 @@ void secuencial_Efecto1(void) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
         }
+        //efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -90,6 +90,12 @@ void secuencial_Efecto2(void) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
         }
+        //efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -104,6 +110,12 @@ void secuencial_Efecto3(void) {
         if (!PORTBbits.RB6) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
+        }
+        //efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
         }
     }
 }
@@ -123,6 +135,12 @@ void secuencial_Efecto4(void) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
         }
+        //efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -133,6 +151,17 @@ void secuencial_Efecto5(void) {
         else if(velocidad==2){__delay_ms(100);}
         else if(velocidad==3){__delay_ms(200);}
         else if(velocidad==4){__delay_ms(400);}
+        //velocidad
+        if (!PORTBbits.RB6) {
+            __delay_ms(50);
+            if(++velocidad==5){velocidad=1;}
+        }
+        //efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
+        }
             LATD = 1 << (7-i);
         if(velocidad==1){__delay_ms(50);}
         else if(velocidad==2){__delay_ms(100);}
@@ -143,6 +172,12 @@ void secuencial_Efecto5(void) {
             __delay_ms(50);
             if(++velocidad==5){velocidad=1;}
         }
+        //efecto
+        if (!PORTBbits.RB7) {
+            __delay_ms(50);
+            if(++efecto==7){efecto=1;}
+            return;
+        }
     }
 }
 
@@ -151,11 +186,10 @@ void secuencial_Efecto6(void) {
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 8; j++) {
             LATD = m;
-            if (i == 0) {
-                if (j % 2 == 0)
+            if (j % 2 == 0){
+                if (i == 0)
                     m += (1 << j);
-            } else {
-                if (j % 2 == 0)
+                else
                     m += (1 << (7-j));
             }
             if (velocidad == 1) {
@@ -173,6 +207,13 @@ void secuencial_Efecto6(void) {
                 if (++velocidad == 5) {
                     velocidad = 1;
                 }
+            }
+            //efecto
+            if (!PORTBbits.RB7) {
+                __delay_ms(50);
+                if (++efecto == 7)
+                    efecto = 1;
+                return;
             }
         }
         m = 0;
